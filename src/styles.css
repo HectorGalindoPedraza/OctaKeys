@@ -1,0 +1,70 @@
+:root {
+  --background: #272727;
+  --dark: #010101;
+  --light: #ffffff;
+  --shadow: #424141;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "system-ui";
+}
+
+.root {
+  background: linear-gradient(38deg, #8f00ff 0%, #b24dff 100%);
+  height: auto;
+  width: 70%;
+  border-radius: 4px;
+  filter: drop-shadow(0px 0px 9px #8f00ff);
+  padding: 50px 0px;
+}
+
+
+.piano {
+  margin: 0px auto;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  background-color: var(--dark);
+  height: 100px;
+  gap: 10px;
+  max-width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.label {
+  bottom: 20%;
+  left: calc(50% - 10px);
+  position: absolute;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.key {
+  background-color: var(--light);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 5px 0px var(--shadow);
+}
+
+.pressed {
+  background-color: #a9a9a9;
+  transition: 0.1s;
+  box-shadow: 0px 0px 0px var(--shadow);
+  font-size: 15px;
+  filter: drop-shadow(0px 3px 2px #fff);
+}
+
+
