@@ -1,0 +1,130 @@
+:root {
+  --background: #272727;
+  --dark: #010101;
+  --light: #ffffff;
+  --shadow: #424141;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "system-ui";
+}
+
+.root {
+  background: linear-gradient(38deg, #8f00ff 0%, #b24dff 100%);
+  height: auto;
+  width: 70%;
+  display: grid;
+  grid-template-rows: 100px auto;
+  border-radius: 4px;
+  filter: drop-shadow(0px 0px 9px #8f00ff);
+  padding: 50px 0px;
+}
+
+#notes-viewer {
+  background-color: var(--background);
+  justify-self: center;
+  width: 60%;
+  filter: drop-shadow(2px 4px 6px black);
+  border-radius: 0px 0px 5px 5px;
+  margin: 20px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualizer-text {
+  color: var(--light);
+  font-family: "Noto Music", sans-serif;
+  font-weight: 400;
+  
+  font-size: 2rem;
+}
+
+.piano {
+  margin: 45px auto;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  background-color: var(--dark);
+  height: 100px;
+  gap: 10px;
+  max-width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.label {
+  bottom: 20%;
+  left: calc(50% - 10px);
+  position: absolute;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.key {
+  background-color: var(--light);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 5px 0px var(--shadow);
+}
+
+.pressed {
+  background-color: #a9a9a9;
+  transition: 0.1s;
+  box-shadow: 0px 0px 0px var(--shadow);
+  font-size: 15px;
+  filter: drop-shadow(0px 3px 2px #fff);
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+#AI-root{
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  justify-content: center;
+  row-gap: 20px
+}
+
+.AI-response{
+  border: 1px solid var(--light);
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid var(--light);
+  color: var(--light);
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1.6rem
+}
+
+.AI-send-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: transparent;
+  color: var(--light);
+  font-size: 2.5rem;
+  font-weight: lighter;
+  border: 1px solid var(--light);
+}
